@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<title>Timespace - absences</title>
+	<link href="stylesheets/jquery.timespace.dark.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="javascripts/timespace.js"></script>
+</head>
+<body>
+	
+	<div id="timelineClock">
+	</div>
+	<script>
+		$(function () {
+			months = [{start: 1, title: 'January'}, {start: 2, title: 'Fabruary'}, {start: 3, title: 'March'}, {start: 4, title: 'April'}, 
+						{start: 5, title: 'May'}, {start: 6, title: 'June'}, {start: 7, title: 'July'}, {start: 8, title: 'August'},
+						{start: 9, title: 'September'}, {start: 10, title: 'October'}, {start: 11, title: 'November'}, {start: 12, title: 'December'} ];
+
+			absences = [{"title":"jolanta.plewa@nokia.com - absent","start":"1","end":"1","description":"no calendar allocation", "type":"wfh"},
+			{"title":"adam.lazar@nokia.com - oof","start":"1","end":"9","description":"OOO", "type":"oof"},
+			{"title":"jolanta.plewa@nokia.com - absent","start":"23","end":"23","description":"no calendar allocation", "type":"wfh"},
+			{"title":"jolanta.plewa@nokia.com - absent","start":"24","end":"24","description":"no calendar allocation", "type":"oof"},
+			{"title":"jolanta.plewa@nokia.com - absent","start":"27","end":"27","description":"no calendar allocation", "type":"oof"},
+			{"title":"jolanta.plewa@nokia.com - absent","start":"28","end":"28","description":"no calendar allocation", "type":"noAllocation"},
+			{"title":"jolanta.plewa@nokia.com - absent","start":"29","end":"29","description":"no calendar allocation", "type":"wfh"},
+			{"title":"jolanta.plewa@nokia.com - absent","start":"30","end":"30","description":"no calendar allocation", "type":"oof"},
+			{"title":"jolanta.plewa@nokia.com - absent","start":"31","end":"31","description":"no calendar allocation", "type":"wfh"},
+			{"title":"kamil.kosinski@nokia.com - unknown","start":17,"end":17,"description":"6h WFH", "type":"wfh"},
+			{"title":"kamil.kosinski@nokia.com - unknown","start":10,"end":10,"description":"9h30min WFH", "type":"oof"},
+			{"title":"kamil.kosinski@nokia.com - oof","start":7,"end":7,"description":"Bilard", "type":"oof"},
+			{"title":"kamil.kosinski@nokia.com - absent","start":"23","end":"23","description":"no calendar allocation", "type":"oof"},
+			{"title":"kamil.kosinski@nokia.com - absent","start":"24","end":"24","description":"no calendar allocation", "type":"wfh"},
+			{"title":"kamil.kosinski@nokia.com - absent","start":"27","end":"27","description":"no calendar allocation", "type":"oof"},
+			{"title":"kamil.kosinski@nokia.com - absent","start":"28","end":"28","description":"no calendar allocation", "type":"oof"},
+			{"title":"kamil.kosinski@nokia.com - absent","start":"29","end":"29","description":"no calendar allocation", "type":"noAllocation"},
+			{"title":"kamil.kosinski@nokia.com - absent","start":"30","end":"30","description":"no calendar allocation", "type":"oof"},
+			{"title":"kamil.kosinski@nokia.com - absent","start":"31","end":"31","description":"no calendar allocation", "type":"oof"}];
+
+			$('#timelineClock').timespace({
+				//selectedMonth: new Date().getDate(),
+				data: {
+					headings: months,
+					events: absences
+				},
+			});
+		});
+	</script>
+</body>
+</html>
